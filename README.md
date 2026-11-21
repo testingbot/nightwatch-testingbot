@@ -6,7 +6,7 @@
 - After every test suite, its name and pass/fail status (with the failed test cases) are sent to TestingBot.
 - `tunnel: true` starts a [TestingBot Tunnel](https://testingbot.com/support/tunnel) in the global `before` hook and stops it in `after`, so the remote browsers can open `localhost` and other internal sites.
 
-Requires Node.js 18 or later and Nightwatch 2.6 or later (tested with 3.16).
+Requires Node.js 20 or later and Nightwatch 2.6 or later (tested with 3.16).
 
 ## Install
 
