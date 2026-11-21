@@ -1,0 +1,10 @@
+{
+  "name": "nightwatch-testingbot-example",
+  "private": true,
+  "scripts": {
+    "test": "nightwatch --env testingbot.chrome"
+  },
+  "devDependencies": {
+    "nightwatch": "^3.16.0"
+  }
+}

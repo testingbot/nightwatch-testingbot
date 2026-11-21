@@ -1,0 +1,71 @@
+{
+  "name": "@testingbot/nightwatch",
+  "version": "0.1.0",
+  "description": "Nightwatch plugin for TestingBot: environment presets, TestingBot Tunnel in the global hooks, and pass/fail status and names for every test suite.",
+  "keywords": [
+    "testingbot",
+    "nightwatch",
+    "nightwatch-plugin",
+    "selenium",
+    "cross-browser",
+    "e2e",
+    "tunnel",
+    "cloud"
+  ],
+  "homepage": "https://github.com/testingbot/nightwatch-testingbot#readme",
+  "bugs": {
+    "url": "https://github.com/testingbot/nightwatch-testingbot/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/testingbot/nightwatch-testingbot.git"
+  },
+  "license": "MIT",
+  "author": "TestingBot <info@testingbot.com> (https://testingbot.com)",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./nightwatch/globals": {
+      "types": "./dist/nightwatch/globals.d.ts",
+      "default": "./dist/nightwatch/globals.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "!dist/**/*.map",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p test/tsconfig.json --noEmit",
+    "test": "vitest run",
+    "prepack": "npm run build"
+  },
+  "peerDependencies": {
+    "nightwatch": ">=2.6.0"
+  },
+  "dependencies": {
+    "testingbot-api": "^1.2.0",
+    "testingbot-tunnel-launcher": "^1.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.19.43",
+    "nightwatch": "^3.16.0",
+    "typescript": "^5.9.3",
+    "vitest": "^3.2.7"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
